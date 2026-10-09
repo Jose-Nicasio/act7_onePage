@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;/*La pagina se desplaza suavemente hacia 
+    bajo o arriba hasta llegar a la seccion seleccionada*/
+}
+.contenido{
+    height: 100vh;
+    background-size: cover;/*Hace que la imagen cubra todo el área disponible*/
+    background-position: center;
+    background-attachment: fixed;   /*efecto de que las imagenes queden fijas*/
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+
+
+}
+#zona1{
+    background-image: url('../images/Uno.jpg');/*establece una imagen de fondo*/
+    align-items: center;
+}
+#zona2{
+    background-image: url('../images/Dos.jpg');
+    align-items: center;
+}
+#zona3{
+    background-image: url('../images/Tres.jpg');
+    align-items: center;
+}
+#zona4{
+    background-image: url('../images/Cuatro.jpg');
+    align-items: center;
+}
+#zona5{
+    background-image: url('../images/Cinco.jpg');
+    align-items: center;
+}
+#zona6{
+    background-image: url('../images/prepation.jpg');
+    align-items: center;
+}
+
+/*menu*/
+nav{
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    z-index:100;/*permite trabajar por capas(entre mas valor mas visible)*/
+    transition: 0.4s ease;/*esea simpre va a tener la misma velocidad y hay 4 ease, esase-in, ease-in.out y ease-out*/
+    transform: translateX(-50%);
+
+
+}
+
+ul{
+    list-style: none;/*eliminar las biñetas de la lista*/
+    display: flex;
+    flex-direction: row;/*organizar los elementos en una fila horizontal*/
+    gap: 20px;/*espaciado entre los elementos*/
+}
+
+ul a{
+    display:block;
+    color:rgb(247, 244, 242);
+    text-decoration: none;
+    border: 1px solid rgb(245, 204, 151);
+    padding: 8px 16px;/*espaciado*/
+    width: 150px;
+    height: 40px;
+    text-align: center;/*Centrar el texto*/
+    transition: 0.4s ease;
+    font-weight: bold;
+    background-color: rgba(133, 110, 81, 0.679);
+}
+a:hover{
+    transform: translateY(-3px);
+    background-color: rgb(240, 224, 131);
+    color:rgb(177, 67, 40);
+    border: none;
+}
+
+.tarjeta-info {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);/*Aplica un desenfoque a lo que se ve detras
+     de la tarjeta en este caso la iamagen del perfume de fondo*/
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.841);
+    text-align: center;
+    max-width: 350px;/*limita el ancho de la tarjeta*/
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);/*sombra*/
+}
+
+.tarjeta-info h2 {
+    font-family: serif;
+    font-size: 26px;
+    color: #333;
+    
+}
+
+.tarjeta-info p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;/*establece una altura 
+    de linea a 1.5 veces al tamaño de la fuente*/
+}
